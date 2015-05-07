@@ -35,22 +35,62 @@
   </div>
 </nav>
 <div class="container-fluid">	
-    <div class="row"><!-- begin row -->
+  <div class="row"><!-- begin row -->
 		<div class="col-md-1">
 			<!-- empty column -->
 		</div>
 		<div class="col-md-5">
 			<img src="img/logo.jpg" alt="VD logo" />
 		</div>		
-		<div class="col-md-5">		
-			<h3><a href="https://myspace.com/veiling.distress">VD on MySpace</a></h3>
-			<div class="form-group"><!-- The admin panel. -->
-				<button type="button" class="btn btn-default" id="adminPanelToggle"></button>
-				<div class="btn-group" role="group" aria-label="..." id="adminPanel">							
-					<button type="button" class="btn btn-default" id="addPost">add Post</button>
-					<button type="button" class="btn btn-default" id="deletePost">delete Post</button>
-				</div>
-			</div>			
+		<div class="col-md-5">
+			<div class="well">
+        <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Veiling Distress to go</div>
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+                <th>Song ID</th>
+                <th>Listen</th>
+                <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>neu5</td>
+              <td>
+              	<audio controls>
+								  <source src="sound/neu5.mp3" type="audio/mpeg">
+									Your browser does not support the html5 audio element.
+								</audio>
+              </td>
+              <td><a class="btn btn-default" href="sound/neu5.mp3">Download</a></td>
+            </tr>
+            <tr>
+              <td>song4</td>
+              <td>
+              	<audio controls>
+								  <source src="sound/song4.mp3" type="audio/mpeg">
+									Your browser does not support the html5 audio element.
+								</audio>
+              </td>
+              <td><a class="btn btn-default" href="sound/song4.mp3">Download</a></td>
+            </tr>
+            <tr>
+              <td>song3</td>
+              <td>
+              	<audio controls>
+								  <source src="sound/song3.mp3" type="audio/mpeg">
+									Your browser does not support the html5 audio element.
+								</audio>
+              </td>
+              <td><a class="btn btn-default" href="sound/song3.mp3">Download</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 		</div>
 		<div class="col-md-1">
 			<!-- empty column -->
@@ -86,8 +126,14 @@
 			</div>
 		</div><!-- end of left side of big site, big left column -->
 		<div class="col-md-5"><!-- right side of the big site, right big column -->
-			<h4>Hier könnte auch noch Inhalt hin.</h4>
-			<p>Vielleicht die Songs zum Download.<p>
+			<h3><a href="https://myspace.com/veiling.distress">VD on MySpace</a></h3>
+			<div class="form-group"><!-- The admin panel. -->
+				<button type="button" class="btn btn-default" id="adminPanelToggle"></button>
+				<div class="btn-group" role="group" aria-label="..." id="adminPanel">							
+					<button type="button" class="btn btn-default" id="addPost">add Post</button>
+					<button type="button" class="btn btn-default" id="deletePost">delete Post</button>
+				</div>
+			</div>			
 		</div><!-- end of right side of big site, big right column -->
 		<div class="col-md-1">		
 			<!-- empty column -->			

@@ -2,8 +2,21 @@
 {
 	text-align: center;
 }
+/* 
+body
+{
+    background-color: #E0E0E0;
+}
+*/
 .container-fluid
 {
 	margin-top: 80px;
 }
-
+li
+{
+	text-align: left;
+}
+th
+{
+	text-align: center;
+}
