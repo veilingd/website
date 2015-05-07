@@ -12,6 +12,10 @@ body
 {
 	margin-top: 80px;
 }
+img 
+{
+	margin-bottom: 40px;
+}
 li
 {
 	text-align: left;
@@ -19,4 +23,11 @@ li
 th
 {
 	text-align: center;
+}
+
+
+/* custom classes */
+.hasAudioPlayer
+{
+	width: 300px;
 }

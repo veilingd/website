@@ -32,7 +32,7 @@ var main = function()
 	/* button handlers stop here */
 	
 	// accordion for the info section
-	$("#infos").accordion({
+	$('#infos').accordion({
 		collapsible: true,
 		heightStyle: "content"
 	});

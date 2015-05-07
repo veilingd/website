@@ -4,14 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="img/favicon.ico">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="img/favicon.ico">
 	<title>Veiling Distress</title>	
 	<link href="css/jquery-ui.min.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">	
+	<link href="css/audioplayer.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,111 +41,276 @@
 			<!-- empty column -->
 		</div>
 		<div class="col-md-5">
-			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="VD logo" />
-		</div>		
+			
+			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
+			
+			<div id="infos">
+				<h3>Wir haben eine Website.</h3>
+				<div>
+					<p>Oh yeah.</p>
+				</div>
+				<h3>Wir haben einen Bassisten.</h3>
+				<div>
+					<p>Muahahahaaa.</p>
+				</div>
+				<h3>Wir haben einen Proberaum.</h3>
+				<div>
+					<p>Wuhuuu.</p>
+				</div>
+			</div>
+			
+		</div>
 		<div class="col-md-5">
+
+			<!-- the player layout losers
 			<div class="well">
         <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Veiling Distress to go</div>
-        <!-- Table -->
-        <table class="table">
-          <thead>
-            <tr>
-                <th>Song ID</th>
-                <th>Listen</th>
-                <th>Download</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>neu5</td>
-              <td>
-								<audio controls>
-								  <source src="sound/neu5.mp3" type="audio/mpeg">
-									Your browser does not support the html5 audio element.
-								</audio>
-              </td>
-              <td><a class="btn btn-default" href="sound/neu5.mp3">Download</a></td>
-            </tr>
-            <tr>
-              <td>song4</td>
-              <td>
-              	<audio controls>
-								  <source src="sound/song4.mp3" type="audio/mpeg">
-									Your browser does not support the html5 audio element.
-								</audio>
-              </td>
-              <td><a class="btn btn-default" href="sound/song4.mp3">Download</a></td>
-            </tr>
-            <tr>
-              <td>song3</td>
-              <td>
-              	<audio controls>
-								  <source src="sound/song3.mp3" type="audio/mpeg">
-									Your browser does not support the html5 audio element.
-								</audio>
-              </td>
-              <td><a class="btn btn-default" href="sound/song3.mp3">Download</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+	        <div class="panel-heading">Responsive but ugly</div>
+	        <table class="table table-hover table-bordered">
+	          <thead>
+	            <tr>
+	                <th>Song</th>
+	                <th>Download</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>neu5</td>
+	              <td><a class="btn btn-default" href="sound/neu5.mp3">Download</a></td>
+	            </tr>
+	            <tr>
+	            	<td class="hasAudioPlayer" colspan="2">
+	            		<audio class="isAudioPlayer img-responsive" preload="auto" controls>
+									  <source src="sound/neu5.ogg" />
+									  <source src="sound/neu5.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	            <tr>
+	              <td>song4</td>
+	              <td><a class="btn btn-default" href="sound/song4.mp3">Download</a></td>
+	            </tr>
+	            <tr>
+	            	<td class="hasAudioPlayer" colspan="2">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song4.ogg" />
+									  <source src="sound/song4.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	            <tr>
+	              <td>song3</td>
+	              <td><a class="btn btn-default" href="sound/song3.mp3">Download</a></td>
+	            </tr>
+							<tr>
+	            	<td class="hasAudioPlayer" colspan="2">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song3.ogg" />
+									  <source src="sound/song3.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+    	</div>
+    	
+    	<div class="well">
+        <div class="panel panel-default">
+	        <div class="panel-heading">Fixed player width</div>
+	        <table class="table table-hover table-bordered">
+	          <thead>
+	            <tr>
+	                <th>Song</th>
+	                <th>Download</th>
+	                <th>Listen</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td>neu5</td>
+	              <td id="downloadTD"><a class="btn btn-default" href="sound/neu5.mp3">Download</a></td>
+	              <td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/neu5.ogg" />
+									  <source src="sound/neu5.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	            <tr>
+	              <td>song4</td>
+	              <td><a class="btn btn-default" href="sound/song4.mp3">Download</a></td>
+	              <td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song4.ogg" />
+									  <source src="sound/song4.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	            <tr>
+	              <td>song3</td>
+	              <td><a class="btn btn-default" href="sound/song3.mp3">Download</a></td>
+	              <td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song3.ogg" />
+									  <source src="sound/song3.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+    	</div>
+    	
+    	
+    	<div class="well">
+        <div class="panel panel-default">
+	        <div class="panel-heading">Vertical breaks mobile</div>
+	        <table class="table table-hover table-bordered">
+	          <thead>
+	            <tr>
+	                <th>neu 5</th>
+	                <th>Song 4</th>
+	                <th>Song 3</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td><a class="btn btn-default" href="sound/neu5.mp3">Download</a></td>
+	              <td><a class="btn btn-default" href="sound/song4.mp3">Download</a></td>
+	              <td><a class="btn btn-default" href="sound/song3.mp3">Download</a></td>
+	            </tr>
+	            <tr>
+	            	<td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/neu5.ogg" />
+									  <source src="sound/neu5.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	              <td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song4.ogg" />
+									  <source src="sound/song4.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	              <td class="hasAudioPlayer">
+	            		<audio class="isAudioPlayer" preload="auto" controls>
+									  <source src="sound/song3.ogg" />
+									  <source src="sound/song3.mp3" type="audio/mpeg" />
+									</audio>
+	            	</td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+    	</div>
+    	
+    	-->
+    	
+    	<!-- the player layout winner of the moment -->
+    	<div class="well">
+        <div class="row">
+					<div class="col-md-3">
+          	<p>
+          		neu5
+          	</p>
+          </div>
+          <div class="col-md-6">
+          	<p>
+	          	<audio class="isAudioPlayer" preload="auto" controls>
+							  <source src="sound/neu5.ogg" />
+							  <source src="sound/neu5.mp3" type="audio/mpeg" />
+							</audio>
+						</p>
+          </div>
+          <div class="col-md-3">
+          	<p>
+          		<a class="btn btn-default" href="sound/neu5.mp3">Download</a>
+          	</p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+					<div class="col-md-3">
+						<p>
+          		song4
+          	</p>
+          </div>
+          <div class="col-md-6">
+	          <p>
+	          	<audio class="isAudioPlayer" preload="auto" controls>
+							  <source src="sound/song4.ogg" />
+							  <source src="sound/song4.mp3" type="audio/mpeg" />
+							</audio>
+						</p>
+          </div>
+          <div class="col-md-3">
+          	<p>
+          		<a class="btn btn-default" href="sound/song4.mp3">Download</a>
+          	</p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+					<div class="col-md-3">
+						<p>
+							song3
+						</p>
+          </div>
+          <div class="col-md-6">
+          	<p>
+	          	<audio class="isAudioPlayer" preload="auto" controls>
+							  <source src="sound/song3.ogg" />
+							  <source src="sound/song3.mp3" type="audio/mpeg" />
+							</audio>
+						</p>
+          </div>
+          <div class="col-md-3">
+          	<p>
+          		<a class="btn btn-default" href="sound/song3.mp3">Download</a>
+          	</p>
+          </div>
+        </div>
+    	</div>
 		</div>
 		<div class="col-md-1">
 			<!-- empty column -->
 		</div>	
 	</div><!-- end row -->
-    <hr style="width: 75%"/>
+  <hr style="width: 75%"/>
 	<div class="row"><!-- begin row -->
 		<div class="col-md-1">		
 			<!-- empty column -->			
 		</div>
-		<div class="col-md-5"><!-- left side of the big site, left big column -->	
-			<div id="infos">
-				<h3>Ist dies der News-Teil?</h3>
-				<div>
-					<p>Falls ja, wie soll der strukturiert sein?</p>
-				</div>
-				<h3>Was soll hier noch rein?</h3>
-				<div>
-					<p>Ja, was nur?</p>
-					<ul>
-						<li>Tolle Liste.</li>
-						<li>Ich weiß.</li>
-						<li>Achja?</li>
-						<li>Ja.</li>
-						<li>Cool.</li>
-					</ul>
-					<p></p>
-				</div>
-				<h3>Wie sinnvoll ist die Verwendung dieses Widget?</h3>
-				<div>
-					<p>Das Widget heißt Accordeon.</p>
-				</div>
-			</div>
-		</div><!-- end of left side of big site, big left column -->
-		<div class="col-md-5"><!-- right side of the big site, right big column -->
+		<div class="col-md-5">
+			<!-- empty column -->
+		</div>
+		<div class="col-md-5">
+			<!-- empty column -->
+			<!-- 
 			<h3><a href="https://myspace.com/veiling.distress">VD on MySpace</a></h3>
-			<div class="form-group"><!-- The admin panel. -->
+			<div class="form-group">
 				<button type="button" class="btn btn-default" id="adminPanelToggle"></button>
 				<div class="btn-group" role="group" aria-label="..." id="adminPanel">							
 					<button type="button" class="btn btn-default" id="addPost">add Post</button>
 					<button type="button" class="btn btn-default" id="deletePost">delete Post</button>
 				</div>
+			-->
 			</div>			
-		</div><!-- end of right side of big site, big right column -->
+		</div>
 		<div class="col-md-1">		
 			<!-- empty column -->			
 		</div>
 	</div><!-- end row -->
-</div> <!-- Container-Abschluss -->
+</div><!-- Container-Abschluss -->
 
 <!-- Do not put content below this line -->
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/audioplayer.js"></script>
 <script src="js/script.js"></script>
+<script src="js/audioplayer.js"></script>
+<script>$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );</script>
 </body>
 </html>
