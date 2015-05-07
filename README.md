@@ -7,6 +7,6 @@ How do I move stuff around?
 
 How do I change more of the looks?
 - Edit the style.css file in the css folder.
-- Add id and class attributes in the tags in the index.html whenever you need.
+- Add id and class attributes in the tags in the index.php whenever you need.
 
 
