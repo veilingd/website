@@ -1,7 +1,4 @@
-*
-{
-	text-align: center;
-}
+
 /* 
 body
 {
@@ -26,8 +23,16 @@ th
 }
 
 
-/* custom classes */
+/* custom IDs and classes */
 .hasAudioPlayer
 {
 	width: 300px;
+}
+.custom-center
+{
+	text-align: center;
+}
+#infos a
+{
+	color: #1c94c4;
 }
