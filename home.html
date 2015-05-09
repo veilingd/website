@@ -5,38 +5,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Veiling Distress Band Website">
+  <meta name="author" content="Veiling Distress">
   <link rel="icon" href="img/favicon.ico">
-	<title>Veiling Distress</title>	
-	<link href="css/jquery-ui.min.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/audioplayer.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<title>Veiling Distress</title>
+	<!-- bootstrap imports -->
+	<!-- CDN imports -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	<!-- local jqueryUI imports -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+	<!-- other local imports -->
+	<link rel="stylesheet" href="css/audioplayer.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Veiling Distress</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
--->
+
 <div class="container-fluid">	
   <div class="row"><!-- begin row -->
 		<div class="col-md-1">
@@ -50,14 +36,14 @@
 				<h3>Sänger oder Sängerin gesucht</h3>
 				<div>
 					<p>Du könntest:</p>
-					<ul>
+					<ul style="list-style-type:square">
 						<li>zw. 20 und 30 Jahre alt sein</li>
-						<li>shouten/growlen, auch gern Clean singen können</li>
-						<li>zu Proben in Rostock sein</li>
+						<li>shouten/growlen, optional auch clean singen können</li>
+						<li>zum Proben in Rostock sein</li>
 					</ul>
 					<p>Schreib uns:</p>
 					<address>
-					  <a href="mailto:veilingd@binkmail.com">veilingd@binkmail.com</a>
+					  <a href="mailto:veilingd@mailinator.com">veilingd@mailinator.com</a>
 					</address>
 				</div>
 				<h3>Bassist an Bord</h3>
@@ -75,16 +61,18 @@
 		</div>
 		
 		<div class="col-xs-12 col-md-5">
-    	<div class="well">
+			
+			<div class="well">
         <div class="row">
 					<div class="col-xs-6 col-md-3">
-          	<p class="custom-center">
+          	<p class="text-center custom-padding">
           		neu 5
           	</p>
           </div>
           <div class="col-xs-6 col-md-3">
-          	<p class="custom-center">
-          		<a class="btn btn-default" href="sound/neu5.mp3">Download</a>
+          	<p class="text-center">
+          		<a class="btn btn-default" href="sound/neu5.mp3">mp3</a>
+          		<a class="btn btn-default" href="sound/neu5.ogg">ogg</a>
           	</p>
           </div>
           <div class="col-xs-12 col-md-6">
@@ -99,13 +87,14 @@
         <hr />
         <div class="row">
 					<div class="col-xs-6 col-md-3">
-						<p class="custom-center">
+						<p class="text-center custom-padding">
           		Song 4
           	</p>
           </div>
           <div class="col-xs-6 col-md-3">
-          	<p class="custom-center">
-          		<a class="btn btn-default" href="sound/song4.mp3">Download</a>
+          	<p class="text-center">
+          		<a class="btn btn-default" href="sound/song4.mp3">mp3</a>
+          		<a class="btn btn-default" href="sound/song4.ogg">ogg</a>
           	</p>
           </div>
           <div class="col-xs-12 col-md-6">
@@ -120,13 +109,14 @@
         <hr />
         <div class="row">
 					<div class="col-xs-6 col-md-3">
-						<p class="custom-center">
+						<p class="text-center custom-padding">
 							Song 3
 						</p>
           </div>
           <div class="col-xs-6 col-md-3">
-          	<p class="custom-center">
-          		<a class="btn btn-default" href="sound/song3.mp3">Download</a>
+          	<p class="text-center">
+          		<a class="btn btn-default" href="sound/song3.mp3">mp3</a>
+          		<a class="btn btn-default" href="sound/song3.ogg">ogg</a>
           	</p>
           </div>
           <div class="col-xs-12 col-md-6">
@@ -139,6 +129,16 @@
           </div>
         </div>
     	</div>
+    	<div class="well">
+	    	<dl class="dl-horizontal">
+				  <dt>Genre</dt>
+				  <dd>Melodic Death Metal</dd>
+				  <dt>Members</dt>
+				  <dd>1 x Bass, 1 x Drums, 2 x Guitars</dd>
+				  <dt>Hometown</dt>
+				  <dd>Rostock</dd>
+				</dl>
+    	</div>
 		</div>
 		<div class="col-md-1">
 			<!-- empty column -->
@@ -147,12 +147,13 @@
 </div><!-- Container-Abschluss -->
 
 <!-- Do not put content below this line -->
-<script src="js/jquery.js"></script>
+<!-- CDN imports -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- local imports -->
 <script src="js/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/audioplayer.js"></script>
+<script src="js/audioplayer.min.js"></script>
 <script src="js/script.js"></script>
-<script src="js/audioplayer.js"></script>
 <script>$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );</script>
 </body>
 </html>
