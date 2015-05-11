@@ -1,25 +1,12 @@
-
-/* 
 body
 {
-    background-color: #E0E0E0;
-}
-*/
-.container-fluid
-{
-	margin-top: 3.0em;
+    /* background-color: #E0E0E0; */
+    margin-top: 1.5em;
+    /* margin-bottom: 3.0em; */
 }
 img 
 {
 	margin-bottom: 3.0em;
-}
-li
-{
-	text-align: left;
-}
-th
-{
-	text-align: center;
 }
 hr { 
     display: block;
@@ -35,11 +22,15 @@ hr {
 {
 	width: 300px;
 }
-.custom-padding
+.custom-padding /* align the song names with the download buttons */
 {
 	padding-top: 0.5em;
 }
-#infos a
+.custom-margin /* for mobile: some space between accordeon and song section */
+{
+	margin-top: 1.5em;
+}
+#infos a, #infos h3 /* used to override the link and heading colors */
 {
 	color: #1c94c4;
 }

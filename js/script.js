@@ -33,8 +33,8 @@ var main = function()
 	
 	// accordion for the info section
 	$('#infos').accordion({
-		collapsible: true,
-		heightStyle: "content"
+		//collapsible: true,
+		//heightStyle: "content"
 	});
 }
 	
