@@ -36,6 +36,18 @@ var main = function()
 		//collapsible: true,
 		//heightStyle: "content"
 	});
+	
+	//activate all players
+	$( '.isAudioPlayer' ).audioPlayer();
+	//$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );
+	
+	//sets first state for tabbed player navigation
+	$('#songTabsButtonList').children().first().addClass('active');
+	$('#songTabsContentList').children().first().addClass('active');
+	//sets id for each tab's content panel
+	$('#songTabsContentList').children().each(function(index) {
+        $(this).attr('id', index);
+    });
 }
 	
 // run main function on startup

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="site">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +7,75 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="Veiling Distress Band Website">
   <meta name="author" content="Veiling Distress">
+  <title>Veiling Distress</title>
   <link rel="icon" href="img/favicon.ico">
-	<title>Veiling Distress</title>
-	<!-- bootstrap imports -->
-	<!-- CDN imports -->
-	
-	<!-- local jqueryUI imports -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.structure.min.css">
-	<link rel="stylesheet" href="css/jquery-ui.theme.min.css">
-	<!-- other local imports -->
-	<link rel="stylesheet" href="css/audioplayer.css">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- local css imports -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body ng-controller="SiteController as site">
 
 <div class="container-fluid">	
   <div class="row"><!-- begin row -->
-		<div class="col-md-1">
+		<div class="col-md-3">
 			<!-- empty column -->
 		</div>
 		<div class="col-xs-12 col-md-5 custom-margin">
 			
 			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
 			
+			<div class="well">
+				<div><!-- music section -->
+				  <!-- Nav tabs -->
+				  <ul id="songTabsButtonList" class="nav nav-tabs" role="tablist">
+				    <li ng-repeat="song in site.songs" role="presentation">
+				    	<a href="#{{$index}}" aria-controls="{{$index}}" role="tab" data-toggle="tab">{{song.displayName}}</a>
+				    </li>
+				  </ul>
+				  <!-- Tab panes -->
+				  <div id="songTabsContentList" class="tab-content">
+			  		<div ng-repeat="song in site.songs" role="tabpanel" class="tab-pane">
+			  			<br />
+			  			<div class="row">
+			  				<div class="col-xs-12 col-md-6">
+			          	<p>
+				          	<audio class="isAudioPlayer" preload="metadata" controls>
+										  <source type="audio/ogg" src="{{song.oggFileName}}" />
+										  <source type="audio/mpeg" src="{{song.mp3FileName}}" />
+										</audio>
+									</p>
+			          </div>
+								<div class="col-xs-6 col-md-3">
+			          	<p class="text-center custom-padding">
+			          		Downloads
+			          	</p>
+			          </div>
+			          <div class="col-xs-6 col-md-3">
+			          	<p class="text-center">
+			          		<a class="btn btn-default" href="{{song.mp3FileName}}">mp3</a>
+			          		<a class="btn btn-default" href="{{song.oggFileName}}">ogg</a>
+			          	</p>
+			          </div>
+			        </div>
+			  		</div>
+				  </div>
+				</div><!-- end of music section -->
+			</div><!-- end of well -->
+			<div class="well">
+	    	<dl class="dl-horizontal">
+				  <dt>Genre</dt>
+				  <dd>Melodic Death Metal</dd>
+				  <dt>Members</dt>
+				  <dd>1 x Bass, 1 x Drums, 2 x Guitars</dd>
+				  <dt>Hometown</dt>
+				  <dd>Rostock</dd>
+				</dl>
+    	</div><!-- end of well -->
 			<div id="infos">
 				<h3>Sänger oder Sängerin gesucht</h3>
 				<div>
@@ -57,117 +100,8 @@
 			</div>
 		</div>
 		
-		<div class="col-xs-12 col-md-5 custom-margin">
-			<div class="well">
-				<div class="row">
-					<div class="col-xs-6 col-md-3">
-          	<p class="text-center custom-padding">
-          		neu 9
-          	</p>
-          </div>
-          <div class="col-xs-6 col-md-3">
-          	<p class="text-center">
-          		<a class="btn btn-default" href="sound/neu9.mp3">mp3</a>
-          		<a class="btn btn-default" href="sound/neu9.ogg">ogg</a>
-          	</p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-          	<p>
-	          	<audio class="isAudioPlayer" preload="auto" controls>
-							  <source src="sound/neu9.ogg" />
-							  <source src="sound/neu9.mp3" type="audio/mpeg" />
-							</audio>
-						</p>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-					<div class="col-xs-6 col-md-3">
-          	<p class="text-center custom-padding">
-          		neu 5
-          	</p>
-          </div>
-          <div class="col-xs-6 col-md-3">
-          	<p class="text-center">
-          		<a class="btn btn-default" href="sound/neu5.mp3">mp3</a>
-          		<a class="btn btn-default" href="sound/neu5.ogg">ogg</a>
-          	</p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-          	<p>
-	          	<audio class="isAudioPlayer" preload="auto" controls>
-							  <source src="sound/neu5.ogg" />
-							  <source src="sound/neu5.mp3" type="audio/mpeg" />
-							</audio>
-						</p>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-					<div class="col-xs-6 col-md-3">
-						<p class="text-center custom-padding">
-          		Song 4
-          	</p>
-          </div>
-          <div class="col-xs-6 col-md-3">
-          	<p class="text-center">
-          		<a class="btn btn-default" href="sound/song4.mp3">mp3</a>
-          		<a class="btn btn-default" href="sound/song4.ogg">ogg</a>
-          	</p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-	          <p>
-	          	<audio class="isAudioPlayer" preload="auto" controls>
-							  <source src="sound/song4.ogg" />
-							  <source src="sound/song4.mp3" type="audio/mpeg" />
-							</audio>
-						</p>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-					<div class="col-xs-6 col-md-3">
-						<p class="text-center custom-padding">
-							Song 3
-						</p>
-          </div>
-          <div class="col-xs-6 col-md-3">
-          	<p class="text-center">
-          		<a class="btn btn-default" href="sound/song3.mp3">mp3</a>
-          		<a class="btn btn-default" href="sound/song3.ogg">ogg</a>
-          	</p>
-          </div>
-          <div class="col-xs-12 col-md-6">
-          	<p>
-	          	<audio class="isAudioPlayer" preload="auto" controls>
-							  <source src="sound/song3.ogg" />
-							  <source src="sound/song3.mp3" type="audio/mpeg" />
-							</audio>
-						</p>
-          </div>
-        </div>
-    	</div>
-    	<div class="well">
-	    	<dl class="dl-horizontal">
-				  <dt>Genre</dt>
-				  <dd>Melodic Death Metal</dd>
-				  <dt>Members</dt>
-				  <dd>1 x Bass, 1 x Drums, 2 x Guitars</dd>
-				  <dt>Hometown</dt>
-				  <dd>Rostock</dd>
-				</dl>
-    	</div>
-		</div>
-		<div class="col-md-1">
-			<!-- empty column -->
-		</div>	
-	</div><!-- end row -->
-	<div class="row">
-		<div class="col-md-1">
-			<!-- empty column -->
-		</div>
-		<div class="col-md-10">
-  		<div class="panel panel-default">
+		<div class="col-xs-12 col-md-2 custom-margin">
+			<div class="panel panel-default"><!-- bio -->
 			  <div class="panel-heading">
 			    <h3 class="panel-title"><strong>Biografie</strong></h3>
 			  </div>
@@ -186,23 +120,22 @@
 						Seit dem Jahr 2014 stehen Dennis (git), Stephan (git) und Marc (dru) wieder zusammen am Equipment. Neue Songs entstehen – und trotz höherem Tempo und der Brutalität von Blastbeats ist der Sound der Vergangenheit noch immer Teil der Musik. Mit Fabian (bass) kam Ende 2015 Verstärkung in den tiefen Oktaven hinzu. Eine passende menschliche Stimme wird in Zukunft das bisher rein instrumentale Projekt komplettieren. Was jetzt in Rostock entsteht, ist „Veiling Distress“.
 					</p>
 			  </div>
-			</div>
-		</div>
-		<div class="col-md-1">
+			</div><!-- end of bio -->
+		</div>	
+		<div class="col-md-2">
 			<!-- empty column -->
-		</div>
-	</div>
+		</div>	
+	</div><!-- end row -->
 </div><!-- Container-Abschluss -->
 
-<!-- Do not put content below this line -->
-<!-- CDN imports -->
-
 <!-- local imports -->
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/audioplayer.min.js"></script>
-<script src="js/script.js"></script>
-<script>$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );</script>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/audioplayer.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
