@@ -9,6 +9,7 @@
   <meta name="author" content="Veiling Distress">
   <title>Veiling Distress</title>
   <link rel="icon" href="img/favicon.ico">
+  <link rel="canonical" href="http://veilingd.herokuapp.com/">
 	<!-- local css imports -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
@@ -16,18 +17,33 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.socialshareprivacy.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body ng-controller="SiteController as site">
 
-<div class="container-fluid">	
+<div class="container-fluid">
+	
+	<div class="row"><!-- begin row -->
+		<div class="col-xs-12 col-md-12 custom-margin">
+				
+				<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
+				
+		</div>
+	</div>
+	
   <div class="row"><!-- begin row -->
 		<div class="col-md-3">
 			<!-- empty column -->
 		</div>
-		<div class="col-xs-12 col-md-5 custom-margin">
+		<div class="col-xs-12 col-md-6">
 			
-			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
+			<!-- test player -->
+			<!--<audio id="isAudioPlayer" preload="metadata" controls>-->
+			<!--  <source type="audio/ogg" src="sound/neu5.ogg" />-->
+			<!--  <source type="audio/mpeg" src="sound/neu5.mp3" />-->
+			<!--</audio>-->
+			<!-- end of test player -->
 			
 			<div class="well">
 				<div><!-- music section -->
@@ -39,27 +55,24 @@
 				  </ul>
 				  <!-- Tab panes -->
 				  <div id="songTabsContentList" class="tab-content">
-			  		<div ng-repeat="song in site.songs" role="tabpanel" class="tab-pane">
+			  		<div ng-repeat="song in site.songs" role="tabpanel" class="tab-pane fade">
 			  			<br />
 			  			<div class="row">
-			  				<div class="col-xs-12 col-md-6">
+			  				<div class="col-xs-12 col-md-8">
 			          	<p>
 				          	<audio class="isAudioPlayer" preload="metadata" controls>
-										  <source type="audio/ogg" src="{{song.oggFileName}}" />
-										  <source type="audio/mpeg" src="{{song.mp3FileName}}" />
+										  <source type="audio/ogg" ng-src="{{song.oggFileName}}" />
+										  <source type="audio/mpeg" ng-src="{{song.mp3FileName}}" />
 										</audio>
 									</p>
 			          </div>
-								<div class="col-xs-6 col-md-3">
-			          	<p class="text-center custom-padding">
-			          		Downloads
-			          	</p>
-			          </div>
-			          <div class="col-xs-6 col-md-3">
-			          	<p class="text-center">
-			          		<a class="btn btn-default" href="{{song.mp3FileName}}">mp3</a>
-			          		<a class="btn btn-default" href="{{song.oggFileName}}">ogg</a>
-			          	</p>
+			          <div class="col-xs-12 col-md-4">
+			          	<!--<p class="text-left">-->
+			          	<div class="btn-group btn-group-justified">
+			          		<a class="btn btn-default" role="button" href="{{song.mp3FileName}}" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="{{song.oggFileName}}" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          	</div>
+			          	<!--</p>-->
 			          </div>
 			        </div>
 			  		</div>
@@ -76,31 +89,55 @@
 				  <dd>Rostock</dd>
 				</dl>
     	</div><!-- end of well -->
-			<div id="infos">
-				<h3>Sänger oder Sängerin gesucht</h3>
-				<div>
-					<p>Du könntest:</p>
-					<ul style="list-style-type:square">
-						<li>zw. 20 und 30 Jahre alt sein</li>
-						<li>shouten/growlen, optional auch clean singen können</li>
-						<li>zum Proben in Rostock sein</li>
-					</ul>
-					<p>Schreib uns:</p>
-					<address>
-					  <a href="mailto:veilingdistress@gmx.net">veilingdistress@gmx.net</a>
-					</address>
-				</div>
-				<h3>Links</h3>
-				<div>
-					<ul>
-						<li><a href="https://www.facebook.com/veiling.distress">facebook</a></li>
-						<li><a href="https://myspace.com/veiling.distress">Myspace</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    		
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="heading1">
+			      <h4 class="panel-title">
+			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+			          Sänger oder Sängerin gesucht
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+			      <div class="panel-body">
+			        <p>Du könntest:</p>
+							<ul class="squareList">
+								<li>zw. 20 und 30 Jahre alt sein</li>
+								<li>shouten/growlen, optional auch clean singen können</li>
+								<li>zum Proben in Rostock sein</li>
+							</ul>
+							<p>Schreib uns:</p>
+							<address>
+							  <a href="mailto:veilingdistress@gmx.net">veilingdistress@gmx.net</a>
+							</address>
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="headingTwo">
+			      <h4 class="panel-title">
+			        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			          Links
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+			      <div class="panel-body">
+			        <ul class="squareList">
+								<li><a href="https://www.facebook.com/veiling.distress">facebook</a></li>
+								<li><a href="https://myspace.com/veiling.distress">Myspace</a></li>
+								<!--<li id="socialshareprivacy"></li>-->
+							</ul>
+			      </div>
+			    </div>
+			  </div>
+			  
+			</div><!-- end of accordeon -->
+		</div><!-- end of col -->
 		
-		<div class="col-xs-12 col-md-2 custom-margin">
+		<div class="col-xs-12 col-md-3">
 			<div class="panel panel-default"><!-- bio -->
 			  <div class="panel-heading">
 			    <h3 class="panel-title"><strong>Biografie</strong></h3>
@@ -122,19 +159,19 @@
 			  </div>
 			</div><!-- end of bio -->
 		</div>	
-		<div class="col-md-2">
+		<!--<div class="col-md-1">-->
 			<!-- empty column -->
-		</div>	
+		<!--</div>	-->
 	</div><!-- end row -->
 </div><!-- Container-Abschluss -->
 
 <!-- local imports -->
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/audioplayer.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/audioplayer.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
 </body>

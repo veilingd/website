@@ -39,15 +39,26 @@ var main = function()
 	
 	//activate all players
 	$( '.isAudioPlayer' ).audioPlayer();
+
 	//$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );
 	
 	//sets first state for tabbed player navigation
 	$('#songTabsButtonList').children().first().addClass('active');
 	$('#songTabsContentList').children().first().addClass('active');
+	$('#songTabsContentList').children().first().addClass('in');
 	//sets id for each tab's content panel
 	$('#songTabsContentList').children().each(function(index) {
         $(this).attr('id', index);
     });
+    
+    // 2 click 'like'
+    //defines the default order of the buttons
+	// $.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'tumblr', 'reddit'];
+	// $.fn.socialSharePrivacy.settings.path_prefix = '../';
+ //	$('#socialshareprivacy').socialSharePrivacy({uri: 'http://veilingd.herokuapp.com/'});
+    
+    
+    
 }
 	
 // run main function on startup

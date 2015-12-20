@@ -1,11 +1,25 @@
 body
 {
+    /*background: url(/img/siteBackground.jpg) no-repeat center center fixed;*/
+    /*background-size: cover;*/
+    
     /* background-color: #E0E0E0; */
-    margin-top: 1.5em;
+    background: url(/img/siteBackground.jpg);
+    background-repeat: no-repeat;
+    /*background-position: right center;*/
+    /*background-position: left top;*/
+    background-position: right top;
+    /*background-position: right bottom;*/
+    /*background-position: left bottom;*/
+    background-attachment: fixed;
+    background-size: cover;
+    
+    /*margin-top: 1.5em;*/
     /* margin-bottom: 3.0em; */
 }
 img 
 {
+    margin-top: 1.5em;
 	margin-bottom: 3.0em;
 }
 hr { 
@@ -33,4 +47,8 @@ hr {
 #infos a, #infos h3 /* used to override the link and heading colors */
 {
 	color: #1c94c4;
+}
+.squareList
+{
+    list-style-type: square;
 }
