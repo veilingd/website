@@ -44,6 +44,10 @@ hr {
 {
 	margin-top: 1.5em;
 }
+.custom-btn-margin
+{
+    margin-bottom: 1.0em;
+}
 #infos a, #infos h3 /* used to override the link and heading colors */
 {
 	color: #1c94c4;

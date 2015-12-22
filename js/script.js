@@ -3,8 +3,8 @@
 /* main runs upon document ready */
 var main = function() 
 {
-	// activates tooltips. The tag's title attribute is displayed on hover.
-	$(document).tooltip();
+	// activates jquery ui tooltips. The tag's title attribute is displayed on hover.
+	//$(document).tooltip();
 	
 	/* admin panel provides some extra buttons, starts hidden */
 	$('#adminPanel').hide();
@@ -31,16 +31,14 @@ var main = function()
 	
 	/* button handlers stop here */
 	
-	// accordion for the info section
-	$('#infos').accordion({
+	// activates jquery ui accordion for the info section
+	//$('#infos').accordion({
 		//collapsible: true,
 		//heightStyle: "content"
-	});
+	//});
 	
 	//activate all players
 	$( '.isAudioPlayer' ).audioPlayer();
-
-	//$( function() { $( '.isAudioPlayer' ).audioPlayer(); } );
 	
 	//sets first state for tabbed player navigation
 	$('#songTabsButtonList').children().first().addClass('active');
@@ -53,11 +51,38 @@ var main = function()
     
     // 2 click 'like'
     //defines the default order of the buttons
-	// $.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'tumblr', 'reddit'];
-	// $.fn.socialSharePrivacy.settings.path_prefix = '../';
+	$.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'tumblr', 'reddit'];
+	$.fn.socialSharePrivacy.settings.path_prefix = '../';
  //	$('#socialshareprivacy').socialSharePrivacy({uri: 'http://veilingd.herokuapp.com/'});
     
     
+    
+    $('#share').socialSharePrivacy({
+		perma_option: false,
+		//info_link_target: '_blank',
+		layout: window.innerWidth < 640 ? 'box' : 'line'
+	});
+    
+	$(window).resize(function () {
+		var layout = window.innerWidth < 640 ? 'box' : 'line';
+		var $share = $('#share');
+		if ($share.socialSharePrivacy('options').layout !== layout) {
+			var enabled = $share.socialSharePrivacy('enabled');
+			$share.socialSharePrivacy('destroy').socialSharePrivacy({
+				perma_option: false,
+				//info_link_target: '_blank',
+				layout: layout
+			});
+
+			for (var name in enabled) {
+				if (enabled[name]) {
+					$share.socialSharePrivacy('enable', name);
+				}
+			}
+		}
+	});
+	
+	
     
 }
 	
