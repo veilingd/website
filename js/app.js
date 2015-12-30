@@ -5,6 +5,7 @@
     app.controller("SiteController", function() {
         
         this.songs = songData;
+        this.tabActive = 0;
         
     });
     

@@ -30,13 +30,7 @@ var main = function()
 	});
 	
 	/* button handlers stop here */
-	
-	// activates jquery ui accordion for the info section
-	//$('#infos').accordion({
-		//collapsible: true,
-		//heightStyle: "content"
-	//});
-	
+
 	//activate all players
 	$( '.isAudioPlayer' ).audioPlayer();
 	
