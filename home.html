@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="site">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
-	<!--<link rel="stylesheet" type="text/css" href="stylesheets/socialshareprivacy.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="stylesheets/common.css">-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -37,44 +35,106 @@
 		</div>
 		<div class="col-xs-12 col-md-6">
 			
-			<!-- test player -->
-			<!--<audio id="isAudioPlayer" preload="metadata" controls>-->
-			<!--  <source type="audio/ogg" src="sound/neu5.ogg" />-->
-			<!--  <source type="audio/mpeg" src="sound/neu5.mp3" />-->
-			<!--</audio>-->
-			<!-- end of test player -->
-			
 			<div class="well">
 				<div><!-- music section -->
 				  <!-- Nav tabs -->
-				  <ul id="songTabsButtonList" class="nav nav-pills" role="tablist">
-				    <li ng-repeat="song in site.songs" role="presentation">
-				    	<a href="#{{$index}}" aria-controls="{{$index}}" role="tab" data-toggle="tab">{{song.displayName}}</a>
+				  <ul class="nav nav-pills" role="tablist">
+				    <li class="active" role="presentation">
+				    	<a href="#0" aria-controls="0" role="tab" data-toggle="tab" >Neu 9</a>
+				    </li>
+				    <li role="presentation">
+				    	<a href="#1" aria-controls="1" role="tab" data-toggle="tab">Neu 5</a>
+				    </li>
+				    <li role="presentation">
+				    	<a href="#2" aria-controls="2" role="tab" data-toggle="tab">Song 3</a>
+				    </li>
+				    <li role="presentation">
+				    	<a href="#3" aria-controls="3" role="tab" data-toggle="tab">Song 4</a>
 				    </li>
 				  </ul>
 				  <!-- Tab panes -->
-				  <div id="songTabsContentList" class="tab-content">
-			  		<div ng-repeat="song in site.songs" role="tabpanel" class="tab-pane fade">
-			  			<br />
+				  <div class="tab-content">
+			  		
+			  		<div id="0" role="tabpanel" class="tab-pane active in fade">
+			  			<br>
 			  			<div class="row">
 			  				<div class="col-xs-12 col-md-8">
 			          	<p>
 				          	<audio class="isAudioPlayer" preload="metadata" controls>
-										  <source type="audio/ogg" ng-src="{{song.oggFileName}}" />
-										  <source type="audio/mpeg" ng-src="{{song.mp3FileName}}" />
+										  <source type="audio/ogg" src="sound/neu9.ogg" />
+										  <source type="audio/mpeg" src="sound/neu9.mp3" />
 										</audio>
 									</p>
 			          </div>
 			          <div class="col-xs-12 col-md-4">
-			          	<!--<p class="text-left">-->
 			          	<div class="btn-group btn-group-justified">
-			          		<a class="btn btn-default" role="button" href="{{song.mp3FileName}}" download><span class="glyphicon glyphicon-save"></span> mp3</a>
-			          		<a class="btn btn-default" role="button" href="{{song.oggFileName}}" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          		<a class="btn btn-default" role="button" href="sound/neu9.mp3" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="sound/neu9.ogg" download><span class="glyphicon glyphicon-save"></span> ogg</a>
 			          	</div>
-			          	<!--</p>-->
 			          </div>
 			        </div>
 			  		</div>
+			  		
+			  		<div id="1" role="tabpanel" class="tab-pane fade">
+			  			<br>
+			  			<div class="row">
+			  				<div class="col-xs-12 col-md-8">
+			          	<p>
+				          	<audio class="isAudioPlayer" preload="metadata" controls>
+										  <source type="audio/ogg" src="sound/neu5.ogg" />
+										  <source type="audio/mpeg" src="sound/neu5.mp3" />
+										</audio>
+									</p>
+			          </div>
+			          <div class="col-xs-12 col-md-4">
+			          	<div class="btn-group btn-group-justified">
+			          		<a class="btn btn-default" role="button" href="sound/neu5.mp3" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="sound/neu5.ogg" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          	</div>
+			          </div>
+			        </div>
+			  		</div>
+			  		
+			  		<div id="2" role="tabpanel" class="tab-pane fade">
+			  			<br>
+			  			<div class="row">
+			  				<div class="col-xs-12 col-md-8">
+			          	<p>
+				          	<audio class="isAudioPlayer" preload="metadata" controls>
+										  <source type="audio/ogg" src="sound/song3.ogg" />
+										  <source type="audio/mpeg" src="sound/song3.mp3" />
+										</audio>
+									</p>
+			          </div>
+			          <div class="col-xs-12 col-md-4">
+			          	<div class="btn-group btn-group-justified">
+			          		<a class="btn btn-default" role="button" href="sound/song3.mp3" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="sound/song3.ogg" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          	</div>
+			          </div>
+			        </div>
+			  		</div>			  		
+			  		
+			  		<div id="3" role="tabpanel" class="tab-pane fade">
+			  			<br>
+			  			<div class="row">
+			  				<div class="col-xs-12 col-md-8">
+			          	<p>
+				          	<audio class="isAudioPlayer" preload="metadata" controls>
+										  <source type="audio/ogg" src="sound/song4.ogg" />
+										  <source type="audio/mpeg" src="sound/song4.mp3" />
+										</audio>
+									</p>
+			          </div>
+			          <div class="col-xs-12 col-md-4">
+			          	<div class="btn-group btn-group-justified">
+			          		<a class="btn btn-default" role="button" href="sound/song4.mp3" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="sound/song4.ogg" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          	</div>
+			          </div>
+			        </div>
+			  		</div>
+			  		
 				  </div>
 				</div><!-- end of music section -->
 			</div><!-- end of well -->
@@ -135,11 +195,6 @@
 				      	</div>
 			      	</div>
 
-					    <!--<ul class="squareList">-->
-							<!--	<li><a href="https://www.facebook.com/veiling.distress">facebook</a></li>-->
-							<!--	<li><a href="https://myspace.com/veiling.distress">Myspace</a></li>-->
-							<!--</ul>-->
-							
 							<div class="well well-lg">
 								<div id="share"></div>
 							</div>
@@ -193,9 +248,9 @@
 					</p>
 			  </div>
 			</div><!-- end of bio -->
-		</div>	
+		</div><!-- end of col -->
 	</div><!-- end row -->
-</div><!-- Container-Abschluss -->
+</div><!-- end of container -->
 
 <!-- local imports -->
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -205,8 +260,6 @@
 <script type="text/javascript" src="javascripts/modules/tumblr.js"></script>
 <script type="text/javascript" src="js/audioplayer.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
 </body>
