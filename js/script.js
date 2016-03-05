@@ -14,17 +14,21 @@ var main = function()
     
     $('#share').socialSharePrivacy({
 		perma_option: false,
+		//uri: 'http://www.example.com/',
+		uri: 'https://www.facebook.com/veiling.distress/',
 		//info_link_target: '_blank',
-		layout: window.innerWidth < 640 ? 'box' : 'line'
+		layout: window.innerWidth < 480 ? 'box' : 'line'
+		//layout: 'line'
 	});
     
 	$(window).resize(function () {
-		var layout = window.innerWidth < 640 ? 'box' : 'line';
+		var layout = window.innerWidth < 480 ? 'box' : 'line';
 		var $share = $('#share');
 		if ($share.socialSharePrivacy('options').layout !== layout) {
 			var enabled = $share.socialSharePrivacy('enabled');
 			$share.socialSharePrivacy('destroy').socialSharePrivacy({
 				perma_option: false,
+				uri: 'https://www.facebook.com/veiling.distress/',
 				//info_link_target: '_blank',
 				layout: layout
 			});
