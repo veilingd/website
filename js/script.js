@@ -5,6 +5,7 @@ var main = function()
 {
 	//activate all players
 	$( '.isAudioPlayer' ).audioPlayer();
+	$( '#collapse2').removeClass('in');
     
     // 2 click 'like'
     //defines the default order of the buttons

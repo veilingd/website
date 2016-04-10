@@ -1,21 +1,19 @@
-body
-{
-    /*background: url(/img/siteBackground.jpg) no-repeat center center fixed;*/
-    /*background-size: cover;*/
-    
-    /* background-color: #E0E0E0; */
-    background: url(/img/siteBackground.jpg);
-    background-repeat: no-repeat;
-    /*background-position: right center;*/
-    /*background-position: left top;*/
-    background-position: right top;
-    /*background-position: right bottom;*/
-    /*background-position: left bottom;*/
-    background-attachment: fixed;
-    background-size: cover;
-    
-    /*margin-top: 1.5em;*/
-    /* margin-bottom: 3.0em; */
+@media (min-width: 762px) {
+    body
+    {
+        background: url(/img/siteBackground.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+@media (max-width: 761px) {
+    body
+    {
+        background: #C0C0C0;
+        background: linear-gradient(hsla(30, 0%, 100%, 1), hsla(0, 0%, 0%, 1));
+    }
 }
 img 
 {

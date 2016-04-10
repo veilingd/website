@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="Veiling Distress Band Website">
-  <meta name="author" content="Veiling Distress">
-  <title>Veiling Distress</title>
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="canonical" href="http://veilingd.herokuapp.com/">
-	<!-- local css imports -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Veiling Distress Band Website">
+<meta name="author" content="Veiling Distress">
+<title>Veiling Distress</title>
+<link rel="icon" href="img/favicon.ico">
+<link rel="canonical" href="http://veilingd.herokuapp.com/">
+<!-- local css imports -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
@@ -24,14 +25,14 @@
 	<div class="row"><!-- begin row -->
 		<div class="col-xs-12 col-md-12 custom-margin">
 				
-				<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
+			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
 				
 		</div>
 	</div><!-- end row -->
 	
-  <div class="row"><!-- begin row -->
+	<div class="row"><!-- begin row -->
 		<div class="col-md-3">
-			<!-- empty column -->
+		
 		</div>
 		<div class="col-xs-12 col-md-6">
 			
@@ -181,7 +182,7 @@
 			        </a>
 		        </h4>
 			    </div>
-			    <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+			    <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
 			      <div class="panel-body">
 			      	
 			      	<div class="text-center"><!-- well well-sm -->
